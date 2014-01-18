@@ -1,0 +1,78 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+%--------------------------------------------------------------
+%  CONFIGURAZIONE GENERALE
+%--------------------------------------------------------------
+
+\documentclass[a4paper,12pt,article,oneside]{memoir} %Impost. fronte/retro default
+\usepackage{layaureo}
+\usepackage{microtype}
+\usepackage[italian]{babel}
+\frenchspacing
+\usepackage[font=small]{quoting} 	%citazioni in display con font dim. ridotte
+
+
+
+%--------------------------------------------------------------
+%  FONT
+%--------------------------------------------------------------
+\usepackage{fontspec,xltxtra}
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont{Linux Libertine}
+\setsansfont{Linux Biolinum} % Font sans serif
+
+
+\usepackage[pdfusetitle]{hyperref} % Creates hyperlinks and index in the PDF document, preferably load after biblatex
+
+
+%--------------------------------------------------------------
+% TESTATINA
+%--------------------------------------------------------------
+\makeheadrule{headings}{\textwidth}{\normalrulethickness} % Aggiunge linea
+\makeevenhead{headings}{\thepage}{}{*** test. sinistra ***} % allinea tit. a dx
+\makeoddhead{headings}{*** test. destra ***}{}{\thepage} % allinea tit. a sin.
+\addtopsmarks{headings}{}{
+  \createmark{chapter}{both}{shownumber}{}{. \space} % Toglie termine 'Capitolo' dal titolo
+}
+\pagestyle{headings} % Activate page style again for changes to take effect
+
+
+%--------------------------------------------------------------
+% ALTRO
+%--------------------------------------------------------------
+
+\setlength{\parskip}{0pt} % Toglie spaziatura tra paragrafi
+
+%NB per usare il font sans serif inserire: \sffamily
+\setsecheadstyle{\large\bfseries\raggedright} % Stile titoli sezione
+\setsubsecheadstyle{\normalsize\em\raggedright} % Stile titoli sottosezione
+
+\sloppybottom % Aggiustamento x righe orfane/vedove
+
+
+
+%--------------------------------------------------------------
+%  TITOLO, AUTORE, DATA
+%--------------------------------------------------------------
+\title{La parrocchia, volto della Chiesa fra la gente (Atti 2,42-48)}
+\author{}
+\date{Busana, 19 gen. 2014}
+
+
+%--------------------------------------------------------------
+%  INIZIO DOCUMENTO
+%--------------------------------------------------------------
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+%--------------------------------------------------------------
+
+Se incomincio a scrivere qualcosa su questo documento, che cosa succede?
+
+
+
+
+
+
+\end{document}
